@@ -6,6 +6,8 @@ const Pic = (props) => {
     <div className="picture-thumbnail">
       <LazyLoad
       debounce={false}
+      throttle={50}
+      offsetVertical={500}
       >
         <img className="picture" src={props.pic.download_url} />
       </LazyLoad>
