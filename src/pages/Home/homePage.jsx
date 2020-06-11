@@ -27,7 +27,7 @@ const Home = () => {
       .get(url)
       .then((res) => {
         setCachedPage(cachedPage.concat({ page: res.data }));
-        // console.log(res.data);
+   
         return res.data;
       })
       .catch((err) => err);

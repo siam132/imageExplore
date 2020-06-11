@@ -1,9 +1,15 @@
 import React from "react";
+import LazyLoad from "react-lazy-load";
 
 const Pic = (props) => {
   return (
     <div className="picture-thumbnail">
-      <img className="picture" src={props.pic.download_url} />
+      <LazyLoad
+      debounce={false}
+      >
+        <img className="picture" src={props.pic.download_url} />
+      </LazyLoad>
+
       <p className="picture-thumbnail-text">{props.pic.author}</p>
       <div className="picture-info">
         <a href={props.pic.download_url} download={`picsum_${props.pic.id}`}>
