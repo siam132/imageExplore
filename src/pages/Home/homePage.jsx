@@ -9,7 +9,7 @@ const Home = () => {
   const [page, setPage] = useState(1);
   const url = `https://picsum.photos/v2/list?page=${page}&limit=10`;
 
-  useEffect(() => {
+  useEffect(() => {  
     fetchData();
     console.log(cachedPage);
     return () => {
